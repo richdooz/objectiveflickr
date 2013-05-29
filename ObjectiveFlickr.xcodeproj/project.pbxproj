@@ -90,6 +90,7 @@
 		6ADECBE60F93B8810024C352 /* OFUtilities.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OFUtilities.h; sourceTree = "<group>"; };
 		6ADECBE70F93B8810024C352 /* OFXMLMapper.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OFXMLMapper.h; sourceTree = "<group>"; };
 		6ADECBE80F93B8810024C352 /* OFXMLMapper.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = OFXMLMapper.m; sourceTree = "<group>"; };
+		9BE092F517557601002E1DD8 /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -122,6 +123,7 @@
 		6ABF72CF0F939BB800B9179E = {
 			isa = PBXGroup;
 			children = (
+				9BE092F517557601002E1DD8 /* Info.plist */,
 				6AA112231442659D00A02F41 /* SystemConfiguration.framework */,
 				6AA112211442659600A02F41 /* Foundation.framework */,
 				6A86664A0F9593B200325E1C /* ObjectiveFlickr-Info.plist */,
