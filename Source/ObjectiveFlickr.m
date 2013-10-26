@@ -578,6 +578,7 @@ static NSData *NSDataFromOAuthPreferredWebForm(NSDictionary *formDictionary)
     else {
         return NO;
     }
+    NSLog(@"OF:Got arg components");
     
     NSString *separator = OFGenerateUUIDString();
     NSString *contentType = [NSString stringWithFormat:@"multipart/form-data; boundary=%@", separator];
@@ -598,6 +599,7 @@ static NSData *NSDataFromOAuthPreferredWebForm(NSDictionary *formDictionary)
         
     [multipartEnd appendFormat:@"\r\n--%@--", separator];
     
+    NSLog(@"OF: multipart");
     
     // now we have everything, create a temp file for this purpose; although UUID is inferior to 
     [self cleanUpTempFile];
@@ -638,6 +640,7 @@ static NSData *NSDataFromOAuthPreferredWebForm(NSDictionary *formDictionary)
     [inImageStream close];
     free(buffer);
     
+    NSLog(@"OF: wrote temp file %@", uploadTempFilename);
     
     UTF8String = [multipartEnd UTF8String];
     writeLength = strlen(UTF8String);
@@ -666,6 +669,8 @@ static NSData *NSDataFromOAuthPreferredWebForm(NSDictionary *formDictionary)
         fileSize = [fileSizeNumber intValue];                    
     }                
 #endif
+
+    NSLog(@"OF: Temp file >> inputStream to HTTPRequest");
     
     NSInputStream *inputStream = [NSInputStream inputStreamWithFileAtPath:uploadTempFilename];
 	
